@@ -8,38 +8,6 @@ function getRounds(){
     setRounds(rounds);
 }
 
-function setRounds(rounds){
-    if (rounds % 2 == 0){
-        alert("Must be odd");
-    }
-    else {
-        window.location.href="chooser.html";
-    }
-}
-
-function cpuTurn(u) {
-    let moves = ["r","p","s"];
-    let choice = Math.floor(Math.random()*3)
-    let c = moves[choice]
-    findWinner(u,c)
-
-}
-
-function findWinner(u,c){    
-    if (u==c){
-        alert ("We both picked "+u);
-    }    
-    else {
-        let winArray=[["r","p","I"],["r","s","you"],["p","s","I"],["p","r","you"],["s","r","I"],["s","p","you"]];
-        for (let i = 0; i < winArray.length; i++){
-              if (winArray[i][0] == u && winArray[i][1] == c){ 
-             winner = winArray[i][2];
-             }
-     }
-        alert("I chose "+c+", and you chose "+u+". "+winner+" win!");
-     return winner;
-    }
-}
 /* Function getRounds
  * Checks if rounds are odd. If even, warning message. 
  * Otherwise, sets round to 1, stores rounds and round in localStorage and loads chooser.html. 
@@ -67,6 +35,9 @@ function setRounds(rounds){
 function showRound(){
     let round = localStorage.getItem("round");
     let rounds = localStorage.getItem("rounds");
+    if (round > rounds){
+        window.location.href = "done.html";
+    }
     let statsBox = document.getElementById("statsBox");
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
