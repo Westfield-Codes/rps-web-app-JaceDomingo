@@ -3,15 +3,14 @@
 <html>
   <head>
     <title>RPS Web App</title>
-    <link rel="stylesheet" href="style.css">
+    <h1>Choose one!</h1> 
+   <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <h1>Rock Paper Scissors</h1>
-    <h2>Choose one:</h2>
-    <button onclick="cpuTurn('r');">Rock</button> 
+  <body onload = "showRound();">
+    <div id="statsBox">Loading ...</div>
+    <button onclick="cpuTurn('r');">Rock</button>
     <button onclick="cpuTurn('p');">Paper</button>
     <button onclick="cpuTurn('s');">Scissors</button>
-   
     <script src="script.js"></script>
   </body>
 </html>
