@@ -1,3 +1,12 @@
 body {
   background-color:lightblue;
+  position:relative;
 }
+#scoreBox{
+  position:absolute;
+  right:10px;
+  top: 10px;
+  border:1px solid black;
+  background:white;
+  padding:10px;
+} 
