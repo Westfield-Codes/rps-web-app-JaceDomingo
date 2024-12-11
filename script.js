@@ -83,16 +83,24 @@ function findWinner(u,c){
         }
         let playersArray = ["You","I"];
         let win = playersArray.indexOf(winner);
-        console.log(win);
         let score = JSON.parse(localStorage.getItem("score"));
         score[win]++;
-        localStorage.setItem("score",JSON.stringify(score));
-        document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
-        let round = localStorage.getItem("round");
-        round++;
-        localStorage.setItem("round",round);
-        localStorage.setItem("winner",winner);
-        showRound();
+        let rounds = localStorage.getItem("rounds");
+        let amount = rounds+1;
+        let amountt = amount/2;
+        console.log(amountt);
+        if (score >= amountt){
+            window.location.href = "gameover.html";
+        }
+        else{
+            localStorage.setItem("score",JSON.stringify(score));
+            document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
+            let round = localStorage.getItem("round");
+            round++;
+            localStorage.setItem("round",round);
+            localStorage.setItem("winner",winner);
+            showRound();
+        }
     }
 }
 function showScore(){
