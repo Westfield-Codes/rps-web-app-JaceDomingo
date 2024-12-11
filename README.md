@@ -24,8 +24,8 @@
 1. **Done** Style over with font 24pt, margin auto, position static (important), width 10 em, text align center.
 1. **Dpne** Get the winner variable from local storage
 1. **Done** Create a variable called message, and begin it winner + won, 
-1. Add the score to message, but join the values with " to " instead of a comma. 
-1. Display the message in scoreBox. 
+1. **Done** Add the score to message, but join the values with " to " instead of a comma. 
+1. **Done** Display the message in scoreBox. 
 1. If this is working, save the branch now. 
 1. Create a new branch called rps web refactored. 
 1. Go over all the code.  If you see any repeated lines, make new a function for those if possible.  

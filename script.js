@@ -45,7 +45,7 @@ function showRound(){
     let message = "Round " + round + " of " + rounds;
     statsBox.innerHTML = message;
     let scoreBox = document.getElementById("scoreBox");
-    scoreBox.innerHTML = "Score: "+score.toString();
+    scoreBox.innerHTML = score.join(" to ");
 }
 
 /* Function cpuTurn
@@ -99,6 +99,7 @@ function showScore(){
     let score = JSON.parse(localStorage.getItem("score"));
     let scoreBox = document.getElementById("scoreBox");
     scoreBox.innerHTML = "Score: "+score.toString();
-    localStorage.getItem(winner);
-    let message = winner+" won";
+    let winner = localStorage.getItem("winner");
+    let message = score.join(" to ")+", "+ winner+" won ";
+    scoreBox.innerHTML = message
 }
