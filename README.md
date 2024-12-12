@@ -29,5 +29,6 @@
 1. **Done**If this is working, save the branch now. 
 1. **Done** Create a new branch called rps web refactored. 
 1. **Done** Go over all the code.  If you see any repeated lines, make new a function for those if possible.  
-1. If one player earns more than half the rounds, end the game.
-1. When you are sure it works, pull request this branch to main, then merge it.  Then you can style to match your wireframes.
+1. **Done** findWinner(): If one player wins more than half the rounds, end the game (shift to gameover.html).
+1. CodeSpace: When you are sure it works, pull request this branch to main, then merge it.  
+1. HTML + CSS: Style your pages to match your wireframes. 

@@ -86,13 +86,12 @@ function findWinner(u,c){
         let score = JSON.parse(localStorage.getItem("score"));
         score[win]++;
         let rounds = localStorage.getItem("rounds");
-        let amount = rounds+1;
+        let amount = parseInt(rounds)+1;
         let amountt = amount/2;
         console.log(amountt);
-        if (score >= amountt){
+        if (score[0] >= amountt || score[1] >= amountt){
             window.location.href = "gameover.html";
         }
-        else{
             localStorage.setItem("score",JSON.stringify(score));
             document.getElementById("result").innerHTML = "You choose " + u + " and I choose " + c + " " + winner + " win!";
             let round = localStorage.getItem("round");
@@ -100,14 +99,14 @@ function findWinner(u,c){
             localStorage.setItem("round",round);
             localStorage.setItem("winner",winner);
             showRound();
-        }
     }
 }
 function showScore(){
     let score = JSON.parse(localStorage.getItem("score"));
+    let winner = "You";
+    if (score[0]<score[1]) winner = "I";
     let scoreBox = document.getElementById("scoreBox");
     scoreBox.innerHTML = "Score: "+score.toString();
-    let winner = localStorage.getItem("winner");
     let message = score.join(" to ")+", "+ winner+" won ";
     scoreBox.innerHTML = message
 }
