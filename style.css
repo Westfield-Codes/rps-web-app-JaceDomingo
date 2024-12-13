@@ -1,3 +1,19 @@
 body {
-  background-color:lightblue;
+  background-color:rgb(77, 202, 224);
+  position:relative;
+}
+#scoreBox{
+  position:absolute;
+  right:10px;
+  top: 10px;
+  border:1px solid black;
+  background:rgb(255, 255, 255);
+  padding:10px;
+} 
+.over{
+  font-size: 24pt;
+  margin: auto;
+  position: static!important;
+  width: 10em;
+  text-align: center;
 }
