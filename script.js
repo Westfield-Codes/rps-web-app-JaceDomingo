@@ -74,14 +74,14 @@ function findWinner(u,c){
     }
     else {
         let winner = " ";
-        let winArray=[["r","p","I"],["r","s","You"],["p","s","I"],["p","r","You"],["s","r","I"],["s","p","You"]];
+        let winArray=[["r","p","I"],["r","s","you"],["p","s","I"],["p","r","you"],["s","r","I"],["s","p","you"]];
         for (let i = 0; i< winArray.length; i++){
             if (winArray[i][0] == u && winArray[i][1]==c){
                 winner= winArray[i][2];
 
             }
         }
-        let playersArray = ["You","I"];
+        let playersArray = ["you","I"];
         let win = playersArray.indexOf(winner);
         let score = JSON.parse(localStorage.getItem("score"));
         score[win]++;
@@ -107,6 +107,10 @@ function showScore(){
     if (score[0]<score[1]) winner = "I";
     let scoreBox = document.getElementById("scoreBox");
     scoreBox.innerHTML = "Score: "+score.toString();
-    let message = score.join(" to ")+", "+ winner+" won ";
+    let message = score.join(" to ")+", "+ winner+" won!";
     scoreBox.innerHTML = message
+}
+function playAgain(){
+    window.location.href = "index.html";
+
 }

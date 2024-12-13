@@ -1,5 +1,5 @@
 body {
-  background-color:rgb(77, 202, 224);
+  background-color:rgb(31, 214, 247);
   position:relative;
 }
 #scoreBox{
@@ -16,4 +16,42 @@ body {
   position: static!important;
   width: 10em;
   text-align: center;
+}
+#console{
+  width: 1800px;
+  background-color: rgb(255, 248, 146);
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+h1{
+  font-size: 60pt;
+  text-align: center;
+}
+h2{
+  font-size: 28pt;
+}
+
+
+#roundBox{
+  text-align: center;
+
+}
+#statsBox{
+  font-size: 30pt;
+}
+#result{
+  font-size: 20pt;
+}
+#buttons button{
+  width: 200px;
+  height: 70px;
+  background-color: aliceblue;
+}
+#buttons{
+  text-align: center;
+}
+button:hover{
+  background-color:rgb(219, 225, 231);
 }
